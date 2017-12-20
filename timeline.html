@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="de-DE" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>产妇跳楼时间轴</title>
+<link rel='stylesheet'  href='css/history.css' type='text/css' media='all' />
+
+<script type='text/javascript' src="js/jquery.min.js"></script>
+<script type='text/javascript' src='js/lodash.js'></script>
+<script type='text/javascript' src='js/TweenMax.min.js'></script>
+<script type='text/javascript' src='js/DrawSVGPlugin.js'></script>
+<script type='text/javascript' src='js/namespaces.js'></script>
+<script type="text/javascript">
+function preload_images(images, functions) {
+    if(typeof functions === 'undefined') functions = {};
+    var loaded = 0;
+    for(var i=0; i<images.length; i++) {
+        ////console.log('preload '+images[i]);
+        var img = new Image();
+        img.onload = img.onerror = function() {
+            ////console.log(img.src + ' loaded');
+            var onImgParams = {
+                //img : img,
+                //index : i,
+                loadedPct : (loaded / images.length)
+            };
+            if( _.isFunction(functions.onImgLoad) ) functions.onImgLoad(onImgParams);
+
+            loaded++;
+            if(loaded >= images.length && _.isFunction(functions.onAllImgsLoaded)) {
+                ////console.log('all imgs loaded');
+                functions.onAllImgsLoaded()
+            }
+        };
+        img.src = images[i];
+    }// endfor
+}// preload_images()
+</script>
+</head>
+
+<body >
+<div id="page" class="site">
+  <div id="content" class="site-content">
+  <center><div class="arrow"><a href="final 2.html#a1"><img src="images/arrow up.jpg" style="margin-top:20px;"></a></div></center>
+  <center><div><span style="font-size:30px;">产妇跳楼时间线</span></div></center>
+    <div class="content-block history">
+      <div class="content-wrap small-wrap vert-spaced lined">
+        <div class="columns">
+          <div class="col third middled copy-col onScrollEnter">
+            <h3 class="chapter-headline">8月30日</h3>
+            <p class="chapter-copy s-text top-spaced">15时34分，产妇马某住院。 </p>
+          </div>
+          <!-- .col -->
+          <div class="col two-thirds middled ui-col rel onScrollEnter">
+            <div class="chapter-image img imgfill" style="background-image:url('images/FOTO1.jpg');"></div>
+            <div class="timeline-container circle-timelines">
+              <div class="fill-parent ui-timelines">
+                <svg version="1.1" id="Layer_1" x="0px" y="0px"
+									 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+                  <circle fill="none" stroke="#000000" stroke-miterlimit="10" cx="300" cy="300" r="300"/>
+                </svg>
+                <svg version="1.1" id="Layer_1" x="0px" y="0px"
+									 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
+                  <circle fill="none" stroke="#000000" stroke-miterlimit="10" cx="300" cy="300" r="300"/>
+                </svg>
+              </div>
+              <!-- .ui-timelines -->
+              <div class="ui-chapters fill-parent">
+                <div class="ui-chapter current-chapter"> <span class="chapter-point"></span> <span class="chapter-label"></span> </div>
+                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">8月31日</span> </div>
+                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">1942</span> </div>
+                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">1962</span> </div>
+                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">1963</span> </div>
+                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">1965</span> </div>
+                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">1977</span> </div>
+                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">1992</span> </div>
+                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">1997</span> </div>
+                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">2002</span> </div>
+                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">2006</span> </div>
+                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">2007</span> </div>
+                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">2009</span> </div>
+                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">2012</span> </div>
+                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">2013</span> </div>
+                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">2014</span> </div>
+                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">2015</span> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script type='text/javascript' src='js/history.js'></script> 
+<script type='text/javascript'>
+/* <![CDATA[ */
+
+
+var _history_data = [
+        {"title":"8月30日","copy":"15时34分，产妇马某住院","img":{"src":"images\/FOTO1.jpg"}},
+        {"title":"8月31日","copy":"上午9时许，产妇马某入待产室","img":{"src":"images\/1940-1000x668.jpg"}},
+        {"title":"8月31日","copy":"10时59分，产妇马某给丈夫发短信要其送水果","img":{"src":"images\/1942-1000x670.jpg"}},
+        {"title":"8月31日","copy":"11时30许，主治医生检查马某胎心正常","img":{"src":"images\/FOTO2-1000x677.jpg"}},
+        {"title":"8月31日","copy":"16时00分，马某给丈夫发短信要其送巧克力和红牛","img":{"src":"images\/1963.jpg"}},
+        {"title":"8月31日","copy":"16时30分，医生监测马某胎心正常","img":{"src":"images\/Foto5-1000x608.jpg"}},
+        {"title":"8月31日","copy":"16时30分，医生检查产情进展顺利，宫口开到4.5厘米，胎心正常，医生决定继续生产","img":{"src":"images\/foto6-1000x625.jpg"}},
+        {"title":"8月31日","copy":"16时50分，丈夫给其发短信，叫通知护士出来拿纸，但未再回复","img":{"src":"images\/foto8-1000x682.jpg"}},
+        {"title":"8月31日","copy":"17时50分，医生检查产妇宫口近全开","img":{"src":"images\/foto9-1000x533.jpg"}},
+        {"title":"8月31日","copy":"18时05分，马某第一次从待产室出来","img":{"src":"images\/foto10-1000x563.jpg"}},
+        {"title":"8月31日","copy":"18时09分，马某在监控中显示第一次跪地","img":{"src":"images\/foto11-1000x667.jpg"}},
+        {"title":"8月31日","copy":"18时15分，马某在监控中显示第二次跪地","img":{"src":"images\/2007-1000x801.jpg"}},
+        {"title":"8月31日","copy":"18时40分左右，妇产科副主任霍军伟检查产妇，产妇情绪不稳定，拒绝继续生产想要剖腹产，宫口开到8-9厘米","img":{"src":"images\/foto13_alternativehs_2009-1000x584.jpg"}},
+        {"title":"2012","copy":"18时16分，在医务人员的搀扶下，产妇回到待产室","img":{"src":"images\/foto14_AlternativeHair2011_Bundy_Bundy_ABH_9185-1000x665.jpg"}},
+        {"title":"2013","copy":"19时19分，产妇第二次从待产室出来","img":{"src":"images\/foto15.jpg"}},
+        {"title":"2014","copy":"19时26分，产妇再次回到待产室","img":{"src":"images\/foto16-1000x602.jpg"}},
+        {"title":"2015","copy":"20时00许，产妇坠楼","img":{"src":"images\/foto17jpg-1000x667.jpg"}}];
+/* ]]> */
+</script> 
+<script type='text/javascript' src='js/page_about.js'></script>
+</body>
+</html>
